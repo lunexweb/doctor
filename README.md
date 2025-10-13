@@ -1,73 +1,220 @@
-# Welcome to your Lovable project
+# Bouckaert Face Craft - Professional Maxillofacial Surgery Website
 
-## Project info
+A modern, professional website for Prof. M.M.R Bouckaert - Maxillofacial & Oral Surgeon. Built with cutting-edge web technologies to provide an exceptional user experience for patients and medical professionals.
 
-**URL**: https://lovable.dev/projects/47e206a1-8c68-402f-9b02-bd4a048664d8
+## 🏥 About
 
-## How can I edit this code?
+This website showcases the professional services and expertise of Prof. M.M.R Bouckaert, a renowned Maxillofacial & Oral Surgeon. The site provides comprehensive information about qualifications, procedures, patient information, and contact details.
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- **Modern Design**: Clean, professional medical aesthetic with responsive design
+- **Multi-page Navigation**: Home, Qualifications, Procedures, Patient Info, and Contact sections
+- **Mobile Responsive**: Optimized for all device sizes
+- **Fast Performance**: Built with Vite for lightning-fast development and production builds
+- **Accessibility**: WCAG compliant with proper semantic HTML and ARIA labels
+- **SEO Optimized**: Structured data and meta tags for better search visibility
+- **Contact Integration**: Direct phone calling and WhatsApp integration
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/47e206a1-8c68-402f-9b02-bd4a048664d8) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS with custom medical theme
+- **UI Components**: shadcn/ui with Radix UI primitives
+- **Routing**: React Router DOM
+- **State Management**: React Query for server state
+- **Icons**: Lucide React
+- **Development**: ESLint, TypeScript strict mode
 
-**Use your preferred IDE**
+## 🚀 Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (v18 or higher)
+- npm or yarn package manager
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd bouckaert-face-craft-main
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+4. **Open your browser**
+   Navigate to `http://localhost:8080` to view the website
+
+### Available Scripts
+
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint for code quality
+
+## 📁 Project Structure
+
+```
+bouckaert-face-craft-main/
+├── public/                 # Static assets
+│   ├── favicon.ico
+│   ├── placeholder.svg
+│   └── robots.txt
+├── src/
+│   ├── components/         # React components
+│   │   ├── ui/            # Reusable UI components (shadcn/ui)
+│   │   ├── About.tsx      # About section
+│   │   ├── Contact.tsx    # Contact form and info
+│   │   ├── Footer.tsx     # Site footer
+│   │   ├── Header.tsx     # Navigation header
+│   │   ├── Hero.tsx       # Hero section
+│   │   ├── Services.tsx   # Services overview
+│   │   └── WhatsAppButton.tsx # WhatsApp integration
+│   ├── hooks/             # Custom React hooks
+│   ├── lib/               # Utility functions
+│   ├── pages/             # Page components
+│   │   ├── Index.tsx      # Home page
+│   │   ├── Qualifications.tsx
+│   │   ├── Procedures.tsx
+│   │   ├── PatientInfo.tsx
+│   │   └── NotFound.tsx
+│   ├── assets/            # Images and media
+│   ├── App.tsx            # Main app component
+│   ├── main.tsx           # App entry point
+│   └── index.css          # Global styles and CSS variables
+├── .gitignore             # Git ignore rules
+├── components.json        # shadcn/ui configuration
+├── package.json           # Dependencies and scripts
+├── tailwind.config.ts     # Tailwind CSS configuration
+├── tsconfig.json          # TypeScript configuration
+├── vite.config.ts         # Vite build configuration
+└── README.md              # This file
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Design System
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The website uses a custom medical design system with:
 
-**Use GitHub Codespaces**
+- **Primary Colors**: Professional blue (#1e3a5f) for trust and reliability
+- **Secondary Colors**: Medical yellow (#ffd700) for warmth and approachability
+- **Typography**: Inter font family for excellent readability
+- **Spacing**: Consistent 8px grid system
+- **Components**: Fully customizable shadcn/ui components
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📱 Pages Overview
 
-## What technologies are used for this project?
+### Home Page (`/`)
+- Hero section with professional introduction
+- About section highlighting expertise
+- Services overview
+- Contact information and call-to-action
 
-This project is built with:
+### Qualifications (`/qualifications`)
+- Educational background
+- Professional certifications
+- Specializations and expertise areas
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Procedures (`/procedures`)
+- Comprehensive list of surgical procedures
+- Detailed explanations of treatments
+- Before/after information
 
-## How can I deploy this project?
+### Patient Information (`/patient-info`)
+- Pre-operative instructions
+- Post-operative care guidelines
+- FAQ section
+- Insurance and payment information
 
-Simply open [Lovable](https://lovable.dev/projects/47e206a1-8c68-402f-9b02-bd4a048664d8) and click on Share -> Publish.
+### Contact (`/#contact`)
+- Contact form with validation
+- Office location and hours
+- Emergency contact information
+- WhatsApp integration for quick communication
 
-## Can I connect a custom domain to my Lovable project?
+## 🔧 Customization
 
-Yes, you can!
+### Adding New Pages
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Create a new component in `src/pages/`
+2. Add the route in `src/App.tsx`
+3. Update navigation in `src/components/Header.tsx`
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Modifying Styles
+
+- Global styles: `src/index.css`
+- Component styles: Use Tailwind classes
+- Custom CSS variables: Defined in `:root` section of `index.css`
+
+### Adding Components
+
+- Place reusable components in `src/components/`
+- Use shadcn/ui components from `src/components/ui/`
+- Follow TypeScript interfaces for type safety
+
+## 🚀 Deployment
+
+### Production Build
+
+```bash
+npm run build
+```
+
+This creates an optimized production build in the `dist/` directory.
+
+### Deployment Options
+
+- **Static Hosting**: Netlify, Vercel, GitHub Pages
+- **CDN**: Cloudflare, AWS CloudFront
+- **Traditional Hosting**: Any web server supporting static files
+
+### Environment Variables
+
+Create a `.env` file for environment-specific configurations:
+
+```env
+VITE_SITE_URL=https://your-domain.com
+VITE_PHONE_NUMBER=0119703320
+VITE_WHATSAPP_NUMBER=your-whatsapp-number
+```
+
+## 📞 Contact Information
+
+- **Phone**: 011 970 3320
+- **WhatsApp**: Available through the floating button
+- **Website**: Professional maxillofacial surgery services
+
+## 🤝 Contributing
+
+This is a professional medical website. For updates or modifications:
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is proprietary and confidential. All rights reserved.
+
+## 🔒 Security
+
+- No sensitive patient data is stored
+- Contact forms use client-side validation
+- HTTPS recommended for production deployment
+- Regular dependency updates for security patches
+
+---
+
+**Built with ❤️ for Prof. M.M.R Bouckaert - Maxillofacial & Oral Surgeon**
