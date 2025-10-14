@@ -19,26 +19,26 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/10 to-background/40" />
       </div>
 
-      {/* Doctor's Image - Floating on the right */}
-      <div className="absolute right-8 top-1/2 transform -translate-y-1/2 z-20 hidden lg:block">
+      {/* Doctor's Image - Responsive positioning */}
+      <div className="absolute right-2 sm:right-4 lg:right-8 top-1/2 transform -translate-y-1/2 z-20">
         <div className="relative group">
           {/* Glow effect */}
-          <div className="absolute -inset-4 bg-gradient-to-r from-brand-yellow/30 via-brand-red/20 to-brand-yellow/30 rounded-3xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+          <div className="absolute -inset-2 sm:-inset-3 lg:-inset-4 bg-gradient-to-r from-brand-yellow/30 via-brand-red/20 to-brand-yellow/30 rounded-2xl sm:rounded-3xl blur-lg sm:blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
           
           {/* Main image container */}
-          <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/20">
+          <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-2 sm:p-3 lg:p-4 shadow-xl sm:shadow-2xl border border-white/20">
             <img
               src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760381689/ai-generated-9019520_1280_qquzlq.png"
               alt="Professor M.M.R Bouckaert"
-              className="w-80 h-96 object-cover rounded-2xl shadow-xl"
+              className="w-48 h-60 sm:w-64 sm:h-80 lg:w-80 lg:h-96 object-cover rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl"
             />
             
             {/* Subtle overlay for better blending */}
-            <div className="absolute inset-4 bg-gradient-to-t from-brand-black/30 via-transparent to-transparent rounded-2xl" />
+            <div className="absolute inset-2 sm:inset-3 lg:inset-4 bg-gradient-to-t from-brand-black/30 via-transparent to-transparent rounded-xl sm:rounded-2xl" />
             
             {/* Professional badge overlay */}
-            <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-white/50">
-              <p className="text-sm font-semibold text-brand-black text-center">
+            <div className="absolute bottom-2 sm:bottom-4 lg:bottom-6 left-2 sm:left-4 lg:left-6 right-2 sm:right-4 lg:right-6 bg-white/95 backdrop-blur-sm rounded-lg sm:rounded-xl p-2 sm:p-3 shadow-lg border border-white/50">
+              <p className="text-xs sm:text-sm font-semibold text-brand-black text-center">
                 Prof. M.M.R Bouckaert
               </p>
               <p className="text-xs text-brand-red text-center mt-1">
@@ -51,7 +51,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32">
-        <div className="max-w-4xl mx-auto lg:max-w-3xl lg:mr-96 text-center lg:text-left animate-fade-in">
+        <div className="max-w-4xl mx-auto sm:max-w-3xl sm:mr-64 lg:max-w-3xl lg:mr-96 text-center sm:text-left animate-fade-in">
           {/* Credentials Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-brand-yellow bg-brand-yellow mb-8">
             <div className="w-2 h-2 rounded-full bg-brand-black animate-pulse" />
