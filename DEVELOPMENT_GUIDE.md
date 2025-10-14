@@ -27,7 +27,6 @@ Visit `http://localhost:8080` to see the website.
 ```
 bouckaert-face-craft-main/
 ├── public/                 # Static files served directly
-│   ├── favicon.ico        # Site icon
 │   ├── placeholder.svg    # Default image placeholder
 │   └── robots.txt         # Search engine directives
 ├── src/

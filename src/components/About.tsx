@@ -2,8 +2,17 @@ import { Award, Heart, Users } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="relative py-20 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760349028/pexels-cottonbro-6502033_fzdozz.jpg"
+          alt="Medical Excellence"
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-muted/70" />
+      </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
@@ -17,17 +26,26 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Image */}
+            {/* Left Column - Video */}
             <div className="animate-slide-in">
               <div className="relative">
-                <div className="aspect-[3/4] bg-gradient-primary rounded-2xl shadow-xl" />
-                <div className="absolute inset-0 bg-primary/5 rounded-2xl backdrop-blur-sm flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <Award className="w-20 h-20 text-secondary mx-auto mb-4" />
-                    <p className="text-primary font-semibold text-lg">
-                      Over 20 Years of Surgical Excellence
-                    </p>
-                  </div>
+                <div className="aspect-square max-w-xs sm:max-w-sm md:max-w-md mx-auto rounded-2xl shadow-xl overflow-hidden">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  >
+                    <source src="https://res.cloudinary.com/doqsolr8d/video/upload/v1760382430/4015-176369904_small_f4s6mw.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                {/* Video Overlay Text */}
+                <div className="absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 bg-black/70 backdrop-blur-sm rounded-lg p-2 sm:p-4">
+                  <p className="text-white font-semibold text-sm sm:text-lg text-center">
+                    Over 20 Years of Surgical Excellence
+                  </p>
                 </div>
               </div>
             </div>
@@ -35,14 +53,14 @@ const About = () => {
             {/* Right Column - Content */}
             <div className="space-y-6 animate-slide-up">
               <div className="prose prose-lg max-w-none">
-                <p className="text-foreground leading-relaxed">
+                <p className="text-gray-800 leading-relaxed">
                   Professor M.M.R Bouckaert is a highly respected Specialist Maxillofacial and Oral Surgeon 
                   with extensive training and qualifications from prestigious institutions. With a B.ChD, 
                   M.Dent (MFOS), FCMFOS(SA), and FFD.RCS (Ireland), Professor Bouckaert brings unparalleled 
                   expertise to complex facial and jaw surgical procedures.
                 </p>
                 
-                <p className="text-foreground leading-relaxed">
+                <p className="text-gray-800 leading-relaxed">
                   Fluent in both English and Afrikaans, Professor Bouckaert is committed to providing 
                   compassionate, patient-centered care. Each treatment plan is meticulously tailored to 
                   meet individual needs, ensuring optimal outcomes and patient satisfaction.
@@ -50,26 +68,26 @@ const About = () => {
               </div>
 
               {/* Quote */}
-              <blockquote className="border-l-4 border-secondary pl-6 py-4 bg-primary/5 rounded-r-lg">
-                <p className="text-xl font-semibold text-primary italic">
+              <blockquote className="border-l-4 border-secondary pl-6 py-4 bg-gray-100 rounded-r-lg">
+                <p className="text-xl font-semibold text-gray-900 italic">
                   "Precision, skill, and empathy — the foundation of surgical excellence."
                 </p>
               </blockquote>
 
               {/* Key Points */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-                <div className="flex items-start gap-3 p-4 bg-background rounded-lg shadow-sm">
+                <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg shadow-sm">
                   <Heart className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-primary mb-1">Patient-Centered</h4>
-                    <p className="text-sm text-muted-foreground">Compassionate care tailored to you</p>
+                    <h4 className="font-semibold text-gray-900 mb-1">Patient-Centered</h4>
+                    <p className="text-sm text-gray-700">Compassionate care tailored to you</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-4 bg-background rounded-lg shadow-sm">
+                <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg shadow-sm">
                   <Users className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-primary mb-1">Bilingual Practice</h4>
-                    <p className="text-sm text-muted-foreground">English & Afrikaans fluency</p>
+                    <h4 className="font-semibold text-gray-900 mb-1">Bilingual Practice</h4>
+                    <p className="text-sm text-gray-700">English & Afrikaans fluency</p>
                   </div>
                 </div>
               </div>

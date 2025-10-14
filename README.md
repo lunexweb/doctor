@@ -68,7 +68,6 @@ This website showcases the professional services and expertise of Prof. M.M.R Bo
 ```
 bouckaert-face-craft-main/
 ├── public/                 # Static assets
-│   ├── favicon.ico
 │   ├── placeholder.svg
 │   └── robots.txt
 ├── src/

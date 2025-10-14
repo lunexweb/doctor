@@ -126,5 +126,3 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Lovable specific
-.lovable/

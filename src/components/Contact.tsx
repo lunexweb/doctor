@@ -24,8 +24,18 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="relative py-20 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760349271/pexels-klaus-nielsen-6303569_raqo47.jpg"
+          alt="Medical Excellence"
+          className="w-full h-full object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-muted/85" />
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
@@ -38,7 +48,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Information */}
             <div className="space-y-6 animate-slide-in">
               <Card className="border-2 hover:border-secondary/50 transition-colors duration-300">
@@ -166,7 +176,7 @@ const Contact = () => {
                     <Button
                       type="submit"
                       size="lg"
-                      className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 transition-all duration-300 font-semibold"
+                      className="w-full bg-brand-yellow text-brand-black hover:bg-brand-yellow/90 hover:shadow-lg transition-all duration-300 font-semibold"
                     >
                       <Mail className="mr-2 h-5 w-5" />
                       Send Message

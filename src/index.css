@@ -8,51 +8,53 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 83% 15%;
+    /* Individual Colors - Yellow, Black, Red */
+    --background: 0 0% 100%;           /* White background */
+    --foreground: 0 0% 0%;             /* Black text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 83% 15%;
+    --card: 0 0% 100%;                 /* White cards */
+    --card-foreground: 0 0% 0%;        /* Black card text */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 83% 15%;
+    --popover: 0 0% 100%;              /* White popovers */
+    --popover-foreground: 0 0% 0%;     /* Black popover text */
 
-    --primary: 210 83% 15%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 0%;                /* Black primary */
+    --primary-foreground: 0 0% 100%;   /* White on black */
 
-    --secondary: 48 100% 50%;
-    --secondary-foreground: 210 83% 15%;
+    --secondary: 48 100% 50%;          /* Pure Yellow */
+    --secondary-foreground: 0 0% 0%;   /* Black on yellow */
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 210 10% 45%;
+    --muted: 0 0% 96%;                 /* Light gray */
+    --muted-foreground: 0 0% 45%;      /* Dark gray */
 
-    --accent: 48 100% 50%;
-    --accent-foreground: 210 83% 15%;
+    --accent: 0 84% 60%;               /* Red accent */
+    --accent-foreground: 0 0% 100%;    /* White on red */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;          /* Red destructive */
+    --destructive-foreground: 0 0% 100%; /* White on red */
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 210 83% 15%;
+    --border: 0 0% 90%;                /* Light gray border */
+    --input: 0 0% 95%;                 /* Light gray input */
+    --ring: 0 0% 0%;                   /* Black focus ring */
 
     --radius: 0.75rem;
 
-    /* Medical brand colors */
-    --medical-blue: 210 83% 15%;
-    --medical-yellow: 48 100% 50%;
-    --medical-blue-light: 210 60% 30%;
-    --medical-gray: 210 10% 50%;
+    /* Individual brand colors */
+    --color-yellow: 48 100% 50%;       /* Pure Yellow */
+    --color-black: 0 0% 0%;            /* Pure Black */
+    --color-red: 0 84% 60%;            /* Pure Red */
+    --color-white: 0 0% 100%;          /* Pure White */
+    --color-gray: 0 0% 50%;            /* Gray */
     
-    /* Premium gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 83% 15%) 0%, hsl(210 60% 25%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(48 100% 50%) 0%, hsl(45 100% 60%) 100%);
+    /* No gradients - individual colors only */
+    --gradient-primary: hsl(var(--color-black));
+    --gradient-accent: hsl(var(--color-yellow));
     
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(210 83% 15% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(210 83% 15% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(210 83% 15% / 0.1);
-    --shadow-xl: 0 20px 25px -5px hsl(210 83% 15% / 0.1);
+    /* Shadows using black */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -64,7 +66,85 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    height: 100%;
+    position: relative;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Custom animations for better mobile experience */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.8s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Prevent scroll bouncing on iOS */
+  .no-bounce {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: none;
+    overscroll-behavior-x: none;
+    touch-action: pan-y;
+  }
+
+  /* Prevent all bouncing */
+  .no-bounce * {
+    overscroll-behavior: none;
+  }
+
+  /* Smooth transitions for all interactive elements */
+  .smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }

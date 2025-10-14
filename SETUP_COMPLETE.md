@@ -152,7 +152,6 @@ Update CSS variables in `src/index.css`:
 ### Images
 - Replace `src/assets/hero-medical.jpg`
 - Add practice photos to `src/assets/`
-- Update favicon in `public/favicon.ico`
 
 ## 🚀 Deployment Options
 

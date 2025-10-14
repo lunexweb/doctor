@@ -47,11 +47,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        medical: {
-          blue: "hsl(var(--medical-blue))",
-          yellow: "hsl(var(--medical-yellow))",
-          "blue-light": "hsl(var(--medical-blue-light))",
-          gray: "hsl(var(--medical-gray))",
+        // Individual brand colors - no mixing
+        brand: {
+          yellow: "hsl(var(--color-yellow))",
+          black: "hsl(var(--color-black))",
+          red: "hsl(var(--color-red))",
+          white: "hsl(var(--color-white))",
+          gray: "hsl(var(--color-gray))",
         },
       },
       backgroundImage: {

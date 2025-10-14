@@ -1,11 +1,18 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ContactIcons from "@/components/ContactIcons";
 import { Bone, Smile, Wrench, Microscope, Activity, Stethoscope, Heart, Zap } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const Procedures = () => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const procedures = [
     {
       icon: Bone,
@@ -120,13 +127,23 @@ const Procedures = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background no-bounce">
       <Header />
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-primary text-primary-foreground">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 text-primary-foreground overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760381811/dentist-1864921_1280_jzgurb.jpg"
+            alt="Medical Excellence"
+            className="w-full h-full object-cover opacity-60"
+          />
+          <div className="absolute inset-0 bg-gradient-primary/80" />
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <Stethoscope className="w-16 h-16 mx-auto mb-6 text-secondary" />
             <h1 className="text-5xl sm:text-6xl font-bold mb-6">
@@ -216,7 +233,7 @@ const Procedures = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a href="tel:0119703320" className="inline-block">
-                    <button className="px-8 py-3 bg-gradient-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-all duration-300 shadow-lg">
+                    <button className="px-8 py-3 bg-gradient-primary text-black rounded-lg font-semibold hover:opacity-90 transition-all duration-300 shadow-lg">
                       Call (011) 970-3320
                     </button>
                   </a>
@@ -240,6 +257,7 @@ const Procedures = () => {
       </section>
 
       <Footer />
+      <ContactIcons />
     </div>
   );
 };

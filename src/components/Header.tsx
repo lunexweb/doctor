@@ -18,49 +18,38 @@ const Header = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
+    { name: "Team", path: "/team" },
     { name: "Qualifications", path: "/qualifications" },
     { name: "Procedures", path: "/procedures" },
     { name: "Patient Info", path: "/patient-info" },
-    { name: "Contact", path: "/#contact", isHash: true },
+    { name: "Contact", path: "/contact" },
   ];
 
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const handleNavClick = (link: typeof navLinks[0]) => {
+  const handleNavClick = () => {
     setIsMobileMenuOpen(false);
-    if (link.isHash) {
-      if (location.pathname !== "/") {
-        window.location.href = link.path;
-      } else {
-        scrollToContact();
-      }
-    }
+    // Force scroll to top immediately when clicking navigation
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   };
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-background/95 backdrop-blur-md shadow-lg"
-            : "bg-transparent"
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md shadow-lg border-b border-gray-800 transition-all duration-300"
       >
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300">
-                <span className="text-2xl font-bold text-primary-foreground">MB</span>
+              <div className="w-12 h-12 rounded-full bg-brand-black flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300">
+                <span className="text-2xl font-bold text-brand-white">MB</span>
               </div>
               <div className="hidden md:block">
-                <div className="text-sm font-bold text-primary leading-tight">
+                <div className="text-sm font-bold text-white leading-tight">
                   Prof. M.M.R Bouckaert
                 </div>
-                <div className="text-xs text-muted-foreground">
+                <div className="text-xs text-gray-300">
                   Maxillofacial & Oral Surgeon
                 </div>
               </div>
@@ -72,11 +61,11 @@ const Header = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  onClick={() => handleNavClick(link)}
-                  className={`text-sm font-medium transition-colors duration-200 hover:text-secondary ${
+                  onClick={() => handleNavClick()}
+                  className={`text-sm font-medium transition-colors duration-200 hover:text-brand-yellow ${
                     location.pathname === link.path
-                      ? "text-primary"
-                      : "text-foreground/80"
+                      ? "text-brand-yellow"
+                      : "text-white"
                   }`}
                 >
                   {link.name}
@@ -89,7 +78,7 @@ const Header = () => {
               <a href="tel:0119703320" className="hidden sm:block">
                 <Button
                   size="default"
-                  className="bg-gradient-primary hover:opacity-90 transition-all duration-300"
+                  className="bg-brand-yellow text-brand-black hover:bg-brand-red hover:text-brand-white transition-all duration-300"
                 >
                   <Phone className="mr-2 h-4 w-4" />
                   Call Now
@@ -103,9 +92,9 @@ const Header = () => {
                 aria-label="Toggle menu"
               >
                 {isMobileMenuOpen ? (
-                  <X className="w-6 h-6 text-primary" />
+                  <X className="w-6 h-6 text-white" />
                 ) : (
-                  <Menu className="w-6 h-6 text-primary" />
+                  <Menu className="w-6 h-6 text-white" />
                 )}
               </button>
             </div>
@@ -119,18 +108,18 @@ const Header = () => {
                   <Link
                     key={link.path}
                     to={link.path}
-                    onClick={() => handleNavClick(link)}
+                    onClick={() => handleNavClick()}
                     className={`text-base font-medium py-2 px-4 rounded-lg transition-colors duration-200 ${
                       location.pathname === link.path
-                        ? "bg-primary/10 text-primary"
-                        : "text-foreground/80 hover:bg-primary/5"
+                        ? "bg-brand-yellow text-brand-black"
+                        : "text-white hover:bg-brand-yellow hover:text-brand-black"
                     }`}
                   >
                     {link.name}
                   </Link>
                 ))}
                 <a href="tel:0119703320" className="mt-2">
-                  <Button size="lg" className="w-full bg-gradient-primary">
+                  <Button size="lg" className="w-full bg-brand-red text-brand-white hover:bg-brand-black">
                     <Phone className="mr-2 h-5 w-5" />
                     Call Now
                   </Button>

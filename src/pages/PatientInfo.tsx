@@ -1,11 +1,18 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ContactIcons from "@/components/ContactIcons";
 import { FileText, HelpCircle, Clock, Shield, CheckCircle, AlertCircle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const PatientInfo = () => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const faqs = [
     {
       question: "What should I bring to my first consultation?",
@@ -69,13 +76,23 @@ const PatientInfo = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background no-bounce">
       <Header />
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-primary text-primary-foreground">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 text-primary-foreground overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760362256/pexels-pavel-danilyuk-6812508_chfb7q.jpg"
+            alt="Medical Excellence"
+            className="w-full h-full object-cover opacity-60"
+          />
+          <div className="absolute inset-0 bg-gradient-primary/80" />
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <FileText className="w-16 h-16 mx-auto mb-6 text-secondary" />
             <h1 className="text-5xl sm:text-6xl font-bold mb-6">
@@ -245,6 +262,7 @@ const PatientInfo = () => {
       </section>
 
       <Footer />
+      <ContactIcons />
     </div>
   );
 };

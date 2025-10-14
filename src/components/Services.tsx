@@ -31,8 +31,18 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="relative py-20 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760349106/pexels-shvetsa-3845945_aqrhnn.jpg"
+          alt="Medical Excellence"
+          className="w-full h-full object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-background/85" />
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
@@ -64,7 +74,7 @@ const Services = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-base text-muted-foreground leading-relaxed">
+                    <CardDescription className="text-base text-gray-700 leading-relaxed">
                       {service.description}
                     </CardDescription>
                   </CardContent>
@@ -75,7 +85,7 @@ const Services = () => {
 
           {/* Additional Note */}
           <div className="mt-12 text-center">
-            <p className="text-muted-foreground">
+            <p className="text-gray-700">
               Each treatment is personalized to meet your unique needs. 
               <span className="block mt-2 text-primary font-semibold">
                 Contact us to discuss your specific requirements.
