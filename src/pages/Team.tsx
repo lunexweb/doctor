@@ -56,10 +56,10 @@ const Team = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <Users className="w-16 h-16 mx-auto mb-6 text-secondary" />
-            <h1 className="text-5xl sm:text-6xl font-bold mb-6">
+            <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-black">
               Our Medical Team
             </h1>
-            <p className="text-xl opacity-90">
+            <p className="text-xl opacity-90 text-black">
               Meet the experienced professionals dedicated to your care and surgical excellence
             </p>
           </div>
