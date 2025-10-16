@@ -6,12 +6,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run check:no-favicons && vite build",
-    "build:dev": "npm run check:no-favicons && vite build --mode development",
+    "build": "vite build",
+    "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "check:no-favicons": "node scripts/prevent-favicons.js",
-    "clean:favicons": "node scripts/prevent-favicons.js --clean"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

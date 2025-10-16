@@ -19,13 +19,7 @@ export default defineConfig({
   publicDir: "public",
   build: {
     rollupOptions: {
-      external: (id) => {
-        // Only exclude favicon files during build, not in development
-        if (process.env.NODE_ENV === 'production') {
-          return /favicon|\.ico$|apple-touch-icon/i.test(id);
-        }
-        return false;
-      },
+      // Clean build configuration
     },
   },
 });
