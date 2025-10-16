@@ -2,6 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* === PERFORMANCE OPTIMIZATION - Added by Cursor === */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hardware acceleration for smooth animations */
+.transition-transform,
+[class*="transition"] {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Smooth scrolling for all scroll containers */
+* {
+  scroll-behavior: smooth;
+}
+/* === END PERFORMANCE OPTIMIZATION === */
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
@@ -64,6 +98,8 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html {
@@ -79,6 +115,7 @@ All colors MUST be HSL.
     position: relative;
     overscroll-behavior: none;
     -webkit-overflow-scrolling: touch;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
@@ -146,5 +183,45 @@ All colors MUST be HSL.
   /* Smooth transitions for all interactive elements */
   .smooth-transition {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* GPU acceleration for animations */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  /* Optimized hover effects */
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px) translateZ(0);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Enhanced focus states for accessibility */
+  .focus-enhanced:focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Smooth scroll with momentum */
+  .smooth-scroll {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Optimized image loading */
+  .lazy-image {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .lazy-image.loaded {
+    opacity: 1;
   }
 }

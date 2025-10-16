@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import ContactIcons from "@/components/ContactIcons";
 import { Bone, Smile, Wrench, Microscope, Activity, Stethoscope, Heart, Zap } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -99,16 +98,19 @@ const Procedures = () => {
     },
     {
       icon: Heart,
-      title: "Wisdom Teeth Removal",
-      overview: "Safe extraction of impacted or problematic third molars.",
+      title: "Emergency Wisdom Tooth Extraction",
+      overview: "Expert surgical extraction of impacted, problematic, or infected third molars with immediate relief.",
       details: [
-        "Impacted wisdom tooth surgery",
-        "Prevention of future dental problems",
-        "Management of infection and pain",
-        "Complex extraction techniques",
-        "Sedation options available",
+        "Impacted wisdom tooth surgery (horizontal, vertical, mesial, distal impaction)",
+        "Emergency extraction for severe pain and infection",
+        "Management of pericoronitis and gum inflammation",
+        "Prevention of damage to adjacent molars (2nd molar protection)",
+        "Complex surgical extraction techniques",
+        "Sedation and anesthesia options for comfort",
+        "Treatment of cysts and tumors around wisdom teeth",
+        "Bone removal when necessary for complete extraction",
       ],
-      process: "Gentle surgical technique with emphasis on patient comfort and rapid recovery.",
+      process: "Comprehensive evaluation with 3D imaging to assess impaction type and proximity to vital structures, followed by gentle surgical extraction with emphasis on preserving adjacent teeth and ensuring rapid recovery.",
     },
     {
       icon: Zap,
@@ -129,15 +131,14 @@ const Procedures = () => {
   return (
     <div className="min-h-screen bg-background no-bounce">
       <Header />
-      <WhatsAppButton />
 
       {/* Hero Section */}
       <section className="relative py-20 text-primary-foreground overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760381811/dentist-1864921_1280_jzgurb.jpg"
-            alt="Medical Excellence"
+            src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760593288/oral-and-maxillofacial-scaled-2048x1024_iezvzu.jpg"
+            alt="Oral and Maxillofacial Surgery"
             className="w-full h-full object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-primary/80" />
@@ -222,6 +223,174 @@ const Procedures = () => {
               })}
             </Accordion>
 
+            {/* Wisdom Teeth Educational Section */}
+            <div className="mt-20">
+              <div className="text-center mb-12">
+                <Heart className="w-12 h-12 mx-auto mb-4 text-secondary" />
+                <h2 className="text-4xl font-bold text-primary mb-4">
+                  Understanding Wisdom Teeth
+                </h2>
+                <div className="w-24 h-1 bg-gradient-accent mx-auto mb-6" />
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  Comprehensive information about third molars, impaction types, and when extraction becomes necessary
+                </p>
+              </div>
+
+              <div className="grid lg:grid-cols-2 gap-8 mb-12">
+                {/* Anatomy Section */}
+                <Card className="border-2 border-blue-200 bg-blue-50/50">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="p-3 rounded-lg bg-blue-100">
+                        <Bone className="w-8 h-8 text-blue-600" />
+                      </div>
+                      <CardTitle className="text-2xl text-blue-700">
+                        Wisdom Teeth Anatomy
+                      </CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="p-4 bg-white rounded-lg border border-blue-200">
+                      <h4 className="font-semibold text-blue-800 mb-2">Tooth Development</h4>
+                      <p className="text-blue-700 text-sm">
+                        Wisdom teeth (third molars) typically develop between ages 17-25. Most people have 4 wisdom teeth, 
+                        one in each quadrant of the mouth.
+                      </p>
+                    </div>
+                    
+                    <div className="p-4 bg-white rounded-lg border border-blue-200">
+                      <h4 className="font-semibold text-blue-800 mb-2">Normal Position</h4>
+                      <p className="text-blue-700 text-sm">
+                        When properly positioned, wisdom teeth are the last molars in each jaw, behind the 1st and 2nd molars.
+                      </p>
+                    </div>
+                    
+                    <div className="p-4 bg-white rounded-lg border border-blue-200">
+                      <h4 className="font-semibold text-blue-800 mb-2">Function</h4>
+                      <p className="text-blue-700 text-sm">
+                        Originally designed for grinding tough foods, modern diets have made wisdom teeth less necessary.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Impaction Types */}
+                <Card className="border-2 border-red-200 bg-red-50/50">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="p-3 rounded-lg bg-red-100">
+                        <Activity className="w-8 h-8 text-red-600" />
+                      </div>
+                      <CardTitle className="text-2xl text-red-700">
+                        Types of Impaction
+                      </CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="p-4 bg-white rounded-lg border border-red-200">
+                      <h4 className="font-semibold text-red-800 mb-2">Horizontal Impaction</h4>
+                      <p className="text-red-700 text-sm">
+                        Tooth grows sideways, pushing against the 2nd molar. This is the most problematic type requiring surgical removal.
+                      </p>
+                    </div>
+                    
+                    <div className="p-4 bg-white rounded-lg border border-red-200">
+                      <h4 className="font-semibold text-red-800 mb-2">Vertical Impaction</h4>
+                      <p className="text-red-700 text-sm">
+                        Tooth is positioned correctly but cannot fully erupt due to lack of space or gum tissue obstruction.
+                      </p>
+                    </div>
+                    
+                    <div className="p-4 bg-white rounded-lg border border-red-200">
+                      <h4 className="font-semibold text-red-800 mb-2">Mesial & Distal Impaction</h4>
+                      <p className="text-red-700 text-sm">
+                        Tooth is angled toward the front (mesial) or back (distal) of the mouth, causing pressure on adjacent teeth.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* When to Seek Treatment */}
+              <Card className="border-2 border-orange-300 bg-orange-50">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 rounded-lg bg-orange-200">
+                      <Stethoscope className="w-8 h-8 text-orange-700" />
+                    </div>
+                    <CardTitle className="text-2xl text-orange-800">
+                      When Emergency Extraction is Needed
+                    </CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="p-6 bg-white rounded-lg border border-orange-200">
+                    <h4 className="font-semibold text-orange-800 mb-4 text-lg">Immediate Treatment Required:</h4>
+                    
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="space-y-3">
+                        <div className="flex items-start gap-2">
+                          <div className="w-2 h-2 rounded-full bg-orange-600 mt-2 flex-shrink-0" />
+                          <span className="text-orange-700 text-sm">
+                            <strong>Severe Pain:</strong> Intense, throbbing pain that doesn't respond to over-the-counter medication
+                          </span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <div className="w-2 h-2 rounded-full bg-orange-600 mt-2 flex-shrink-0" />
+                          <span className="text-orange-700 text-sm">
+                            <strong>Infection:</strong> Swelling, redness, pus, or fever indicating pericoronitis
+                          </span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <div className="w-2 h-2 rounded-full bg-orange-600 mt-2 flex-shrink-0" />
+                          <span className="text-orange-700 text-sm">
+                            <strong>Difficulty Eating:</strong> Pain when chewing or opening mouth
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-3">
+                        <div className="flex items-start gap-2">
+                          <div className="w-2 h-2 rounded-full bg-orange-600 mt-2 flex-shrink-0" />
+                          <span className="text-orange-700 text-sm">
+                            <strong>Damage to Adjacent Teeth:</strong> Pressure causing damage to 2nd molars
+                          </span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <div className="w-2 h-2 rounded-full bg-orange-600 mt-2 flex-shrink-0" />
+                          <span className="text-orange-700 text-sm">
+                            <strong>Cyst Formation:</strong> Development of cysts around impacted teeth
+                          </span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <div className="w-2 h-2 rounded-full bg-orange-600 mt-2 flex-shrink-0" />
+                          <span className="text-orange-700 text-sm">
+                            <strong>Limited Mouth Opening:</strong> Trismus or difficulty opening mouth fully
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-orange-100 rounded-lg border border-orange-300">
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 rounded-lg bg-orange-200">
+                        <Heart className="w-5 h-5 text-orange-700" />
+                      </div>
+                      <div>
+                        <h5 className="font-semibold text-orange-800 mb-2">Why Choose Professor Bouckaert?</h5>
+                        <p className="text-orange-700 text-sm">
+                          With extensive experience in complex wisdom tooth extractions, Professor Bouckaert uses advanced 
+                          techniques to minimize discomfort and ensure optimal outcomes. Emergency appointments are available 
+                          for urgent cases requiring immediate attention.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
             <Card className="mt-16 border-2 border-secondary/30 bg-primary/5">
               <CardContent className="p-8 text-center">
                 <h3 className="text-2xl font-bold text-primary mb-4">
@@ -235,18 +404,6 @@ const Procedures = () => {
                   <a href="tel:0119703320" className="inline-block">
                     <button className="px-8 py-3 bg-gradient-primary text-black rounded-lg font-semibold hover:opacity-90 transition-all duration-300 shadow-lg">
                       Call (011) 970-3320
-                    </button>
-                  </a>
-                  <a
-                    href={`https://wa.me/27119703320?text=${encodeURIComponent(
-                      "Hello, I would like to schedule a consultation."
-                    )}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block"
-                  >
-                    <button className="px-8 py-3 bg-[#25D366] text-white rounded-lg font-semibold hover:bg-[#20BA5A] transition-all duration-300 shadow-lg">
-                      WhatsApp Us
                     </button>
                   </a>
                 </div>

@@ -5,7 +5,8 @@ export { default as About } from './About';
 export { default as Services } from './Services';
 export { default as Contact } from './Contact';
 export { default as Footer } from './Footer';
-export { default as WhatsAppButton } from './WhatsAppButton';
+export { default as LoadingSpinner } from './LoadingSpinner';
+export { default as LazyImage } from './LazyImage';
 
 // Re-export UI components for convenience
 export * from './ui/button';

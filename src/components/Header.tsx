@@ -47,7 +47,7 @@ const Header = () => {
               </div>
               <div className="hidden md:block">
                 <div className="text-sm font-bold text-white leading-tight">
-                  Prof. M.M.R Bouckaert
+                  Prof. M Bouckaert
                 </div>
                 <div className="text-xs text-gray-300">
                   Maxillofacial & Oral Surgeon
@@ -56,7 +56,7 @@ const Header = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-8 smooth-transition">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}

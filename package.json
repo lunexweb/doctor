@@ -2,14 +2,16 @@
   "name": "bouckaert-face-craft",
   "private": true,
   "version": "1.0.0",
-  "description": "Professional website for Prof. M.M.R Bouckaert - Maxillofacial & Oral Surgeon",
+  "description": "Professional website for Prof. M Bouckaert - Maxillofacial & Oral Surgeon",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "build:dev": "vite build --mode development",
+    "build": "npm run check:no-favicons && vite build",
+    "build:dev": "npm run check:no-favicons && vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check:no-favicons": "node scripts/prevent-favicons.js",
+    "clean:favicons": "node scripts/prevent-favicons.js --clean"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

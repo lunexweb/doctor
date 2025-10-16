@@ -1,4 +1,4 @@
-import { Bone, Smile, Wrench, Microscope, Activity } from "lucide-react";
+import { Bone, Smile, Wrench, Microscope, Activity, Skull } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const services = [
@@ -27,6 +27,11 @@ const services = [
     title: "Facial Trauma Management",
     description: "Expert treatment of facial injuries, fractures, and soft tissue trauma with precision care.",
   },
+  {
+    icon: Skull,
+    title: "Craniofacial Surgery",
+    description: "Complex reconstructive surgery for congenital and acquired craniofacial deformities and abnormalities.",
+  },
 ];
 
 const Services = () => {
@@ -35,8 +40,8 @@ const Services = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760349106/pexels-shvetsa-3845945_aqrhnn.jpg"
-          alt="Medical Excellence"
+          src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760593288/Website-facial-and-oral_blekto.webp"
+          alt="Facial and Oral Surgery Services"
           className="w-full h-full object-cover opacity-15"
         />
         <div className="absolute inset-0 bg-background/85" />
@@ -62,7 +67,7 @@ const Services = () => {
               return (
                 <Card
                   key={index}
-                  className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-secondary/50 bg-card"
+                  className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-secondary/50 bg-card hover-lift gpu-accelerated focus-enhanced"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <CardHeader>

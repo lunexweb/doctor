@@ -1,10 +1,10 @@
 # Bouckaert Face Craft - Professional Maxillofacial Surgery Website
 
-A modern, professional website for Prof. M.M.R Bouckaert - Maxillofacial & Oral Surgeon. Built with cutting-edge web technologies to provide an exceptional user experience for patients and medical professionals.
+A modern, professional website for Prof. M Bouckaert - Maxillofacial & Oral Surgeon. Built with cutting-edge web technologies to provide an exceptional user experience for patients and medical professionals.
 
 ## 🏥 About
 
-This website showcases the professional services and expertise of Prof. M.M.R Bouckaert, a renowned Maxillofacial & Oral Surgeon. The site provides comprehensive information about qualifications, procedures, patient information, and contact details.
+This website showcases the professional services and expertise of Prof. M Bouckaert, a renowned Maxillofacial & Oral Surgeon. The site provides comprehensive information about qualifications, procedures, patient information, and contact details.
 
 ## ✨ Features
 
@@ -216,4 +216,5 @@ This project is proprietary and confidential. All rights reserved.
 
 ---
 
+**Built with ❤️ for Prof. M Bouckaert - Maxillofacial & Oral Surgeon**
 **Built with ❤️ for Prof. M.M.R Bouckaert - Maxillofacial & Oral Surgeon**

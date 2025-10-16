@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import ContactIcons from "@/components/ContactIcons";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -35,14 +34,13 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background no-bounce">
       <Header />
-      <WhatsAppButton />
 
       {/* Hero Section */}
       <section className="relative py-20 text-primary-foreground overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760349271/pexels-klaus-nielsen-6303569_raqo47.jpg"
+            src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760594530/347808464_nbhp1y.jpg"
             alt="Contact Us"
             className="w-full h-full object-cover opacity-60"
           />

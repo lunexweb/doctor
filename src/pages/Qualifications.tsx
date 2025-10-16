@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import ContactIcons from "@/components/ContactIcons";
-import { Award, GraduationCap, BookOpen, Users, Globe, Building } from "lucide-react";
+import { Award, GraduationCap, BookOpen, Users, Globe } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Qualifications = () => {
@@ -58,17 +57,10 @@ const Qualifications = () => {
     },
   ];
 
-  const memberships = [
-    "South African Association of Maxillofacial and Oral Surgeons (SAAOMS)",
-    "Health Professions Council of South Africa (HPCSA)",
-    "South African Dental Association (SADA)",
-    "International Association of Oral and Maxillofacial Surgeons (IAOMS)",
-  ];
 
   return (
     <div className="min-h-screen bg-background no-bounce">
       <Header />
-      <WhatsAppButton />
 
       {/* Hero Section */}
       <section className="relative py-20 text-primary-foreground overflow-hidden">
@@ -176,42 +168,6 @@ const Qualifications = () => {
         </div>
       </section>
 
-      {/* Professional Memberships */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Building className="w-12 h-12 mx-auto mb-4 text-secondary" />
-              <h2 className="text-4xl font-bold text-primary mb-4">
-                Professional Memberships
-              </h2>
-              <div className="w-24 h-1 bg-gradient-accent mx-auto mb-6" />
-            </div>
-
-            <Card className="border-2">
-              <CardContent className="p-8">
-                <ul className="space-y-4">
-                  {memberships.map((membership, index) => (
-                    <li
-                      key={index}
-                      className="flex items-start gap-3 text-lg text-foreground"
-                    >
-                      <div className="w-2 h-2 rounded-full bg-secondary mt-3 flex-shrink-0" />
-                      <span>{membership}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-
-            <div className="mt-12 text-center">
-              <p className="text-muted-foreground text-lg">
-                Practice Number: <span className="font-semibold text-primary">6201296</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
       <ContactIcons />

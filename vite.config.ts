@@ -15,4 +15,17 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // Explicitly exclude favicon files from build (only in production)
+  publicDir: "public",
+  build: {
+    rollupOptions: {
+      external: (id) => {
+        // Only exclude favicon files during build, not in development
+        if (process.env.NODE_ENV === 'production') {
+          return /favicon|\.ico$|apple-touch-icon/i.test(id);
+        }
+        return false;
+      },
+    },
+  },
 });

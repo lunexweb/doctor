@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Practice Info */}
           <div>
             <h3 className="text-xl font-bold mb-4 text-secondary">
-              Professor M.M.R Bouckaert
+              Professor M Bouckaert
             </h3>
             <p className="text-sm opacity-90 mb-2">
               Specialist Maxillofacial and Oral Surgeon
@@ -84,26 +84,24 @@ const Footer = () => {
         <div className="pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm opacity-75">
             <p>
-              © {currentYear} Professor M.M.R Bouckaert. All rights reserved.
+              © {currentYear} Professor M Bouckaert. All rights reserved.
             </p>
-            <p className="text-xs">
-              Languages: English & Afrikaans
-            </p>
-          </div>
-          
-          {/* Coded by Lunexweb */}
-          <div className="text-center mt-6 pt-4 border-t border-primary-foreground/10">
-            <p className="text-xs opacity-60">
-              Coded by{" "}
-              <a 
-                href="https://www.lunexweb.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-secondary hover:text-secondary/80 transition-colors duration-200 underline font-bold"
-              >
-                Lunexweb
-              </a>
-            </p>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <p className="text-xs">
+                Languages: English & Afrikaans
+              </p>
+              <p className="text-xs">
+                Designed & Coded by{" "}
+                <a
+                  href="https://www.lunexweb.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-secondary hover:text-white transition-colors duration-300"
+                >
+                  Lunexweb
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>

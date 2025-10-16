@@ -125,3 +125,14 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Favicon prevention - NEVER allow favicon files
+favicon.ico
+favicon.png
+favicon.svg
+apple-touch-icon.png
+apple-touch-icon-precomposed.png
+manifest.json
+site.webmanifest
+**/favicon*
+**/*favicon*

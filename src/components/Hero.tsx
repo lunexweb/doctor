@@ -12,9 +12,10 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760349184/pexels-karolina-grabowska-6627374_imxf8f.jpg"
+          src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760362366/pexels-pavel-danilyuk-6812453_lfayw4.jpg"
           alt="Medical Excellence"
           className="w-full h-full object-cover opacity-70"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/10 to-background/40" />
       </div>
@@ -34,7 +35,7 @@ const Hero = () => {
 
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl font-bold text-brand-black mb-6 leading-tight">
-              Professor M.M.R Bouckaert
+              Professor M Bouckaert
             </h1>
 
             {/* Subtitle */}
@@ -52,19 +53,19 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button
                 size="lg"
-                className="bg-brand-black text-brand-white hover:bg-brand-gray transition-all duration-300 px-6 py-4 text-base font-semibold shadow-lg hover:shadow-xl"
+                className="bg-brand-black text-brand-white hover:bg-brand-gray transition-all duration-300 px-6 py-4 text-base font-semibold shadow-lg hover:shadow-xl focus-enhanced"
                 onClick={() => scrollToSection("contact")}
               >
-                <Phone className="mr-2 h-4 w-4" />
+                <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Book Consultation
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-brand-red text-brand-red hover:bg-brand-red hover:text-brand-white transition-all duration-300 px-6 py-4 text-base font-semibold"
+                className="border-2 border-brand-red text-brand-red hover:bg-brand-red hover:text-brand-white transition-all duration-300 px-6 py-4 text-base font-semibold focus-enhanced"
                 onClick={() => scrollToSection("contact")}
               >
-                <MapPin className="mr-2 h-4 w-4" />
+                <MapPin className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Contact Practice
               </Button>
             </div>
@@ -82,20 +83,23 @@ const Hero = () => {
               <div className="absolute -inset-3 bg-gradient-to-r from-brand-yellow/30 via-brand-red/20 to-brand-yellow/30 rounded-2xl blur-lg opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
               
               {/* Main image container */}
-              <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-3 shadow-xl border border-white/20">
+              <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-3 shadow-xl border border-white/20 min-h-[240px] sm:min-h-[288px] min-w-[200px] sm:min-w-[224px]">
                 <img
-                  src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760381689/ai-generated-9019520_1280_qquzlq.png"
-                  alt="Professor M.M.R Bouckaert"
-                  className="w-56 h-72 object-cover rounded-xl shadow-lg"
+                  src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760551693/WhatsApp_Image_2025-10-15_at_14.45.58_gfoocl.jpg"
+                  alt="Professor M Bouckaert"
+                  className="w-48 h-60 sm:w-56 sm:h-72 object-cover rounded-xl shadow-lg object-right"
+                  loading="eager"
+                  onLoad={() => console.log('Mobile image loaded successfully')}
+                  onError={(e) => console.error('Mobile image failed to load:', e)}
                 />
                 
                 {/* Subtle overlay for better blending */}
                 <div className="absolute inset-3 bg-gradient-to-t from-brand-black/30 via-transparent to-transparent rounded-xl" />
                 
                 {/* Professional badge overlay */}
-                <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-white/50">
+                <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-white/50">
                   <p className="text-sm font-semibold text-brand-black text-center">
-                    Prof. M.M.R Bouckaert
+                    Prof. M Bouckaert
                   </p>
                   <p className="text-xs text-brand-red text-center mt-1">
                     Specialist Maxillofacial & Oral Surgeon
@@ -115,20 +119,23 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-brand-yellow/30 via-brand-red/20 to-brand-yellow/30 rounded-3xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
               
               {/* Main image container */}
-              <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/20">
+              <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/20 min-h-[320px] lg:min-h-[416px] min-w-[280px] lg:min-w-[352px]">
                 <img
-                  src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760381689/ai-generated-9019520_1280_qquzlq.png"
-                  alt="Professor M.M.R Bouckaert"
-                  className="w-80 h-96 object-cover rounded-2xl shadow-xl"
+                  src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760551693/WhatsApp_Image_2025-10-15_at_14.45.58_gfoocl.jpg"
+                  alt="Professor M Bouckaert"
+                  className="w-64 h-80 lg:w-80 lg:h-96 object-cover rounded-2xl shadow-xl object-right"
+                  loading="eager"
+                  onLoad={() => console.log('Desktop image loaded successfully')}
+                  onError={(e) => console.error('Desktop image failed to load:', e)}
                 />
                 
                 {/* Subtle overlay for better blending */}
                 <div className="absolute inset-4 bg-gradient-to-t from-brand-black/30 via-transparent to-transparent rounded-2xl" />
                 
                 {/* Professional badge overlay */}
-                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-white/50">
+                <div className="absolute bottom-4 left-4 right-4 lg:bottom-6 lg:left-6 lg:right-6 bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-white/50">
                   <p className="text-sm font-semibold text-brand-black text-center">
-                    Prof. M.M.R Bouckaert
+                    Prof. M Bouckaert
                   </p>
                   <p className="text-xs text-brand-red text-center mt-1">
                     Specialist Maxillofacial & Oral Surgeon
@@ -138,7 +145,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="max-w-3xl mr-96 text-left animate-fade-in">
+          <div className="max-w-3xl mr-0 xl:mr-96 text-left animate-fade-in">
             {/* Credentials Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-brand-yellow bg-brand-yellow mb-8">
               <div className="w-2 h-2 rounded-full bg-brand-black animate-pulse" />
@@ -149,7 +156,7 @@ const Hero = () => {
 
             {/* Main Heading */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-brand-black mb-6 leading-tight">
-              Professor M.M.R Bouckaert
+              Professor M Bouckaert
             </h1>
 
             {/* Subtitle */}
@@ -170,7 +177,7 @@ const Hero = () => {
                 className="bg-brand-black text-brand-white hover:bg-brand-gray transition-all duration-300 px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl"
                 onClick={() => scrollToSection("contact")}
               >
-                <Phone className="mr-2 h-5 w-5" />
+                <Phone className="mr-2 h-4 w-4 lg:h-5 lg:w-5" />
                 Book Consultation
               </Button>
               <Button
@@ -179,7 +186,7 @@ const Hero = () => {
                 className="border-2 border-brand-red text-brand-red hover:bg-brand-red hover:text-brand-white transition-all duration-300 px-8 py-6 text-lg font-semibold"
                 onClick={() => scrollToSection("contact")}
               >
-                <MapPin className="mr-2 h-5 w-5" />
+                <MapPin className="mr-2 h-4 w-4 lg:h-5 lg:w-5" />
                 Contact Practice
               </Button>
             </div>

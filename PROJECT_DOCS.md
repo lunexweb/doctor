@@ -3,7 +3,7 @@
 ## 📋 Project Overview
 
 **Project Name**: Bouckaert Face Craft  
-**Client**: Prof. M.M.R Bouckaert - Maxillofacial & Oral Surgeon  
+**Client**: Prof. M Bouckaert - Maxillofacial & Oral Surgeon  
 **Purpose**: Professional medical website showcasing surgical expertise and services  
 **Technology**: Modern React/TypeScript web application  
 

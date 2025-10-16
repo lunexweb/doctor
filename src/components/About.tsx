@@ -17,7 +17,7 @@ const About = () => {
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-4">
-              About Professor Bouckaert
+              About Professor M Bouckaert
             </h2>
             <div className="w-24 h-1 bg-gradient-accent mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -29,7 +29,7 @@ const About = () => {
             {/* Left Column - Video */}
             <div className="animate-slide-in">
               <div className="relative">
-                <div className="aspect-square max-w-xs sm:max-w-sm md:max-w-md mx-auto rounded-2xl shadow-xl overflow-hidden">
+                <div className="aspect-video max-w-sm sm:max-w-md md:max-w-lg mx-auto rounded-2xl shadow-xl overflow-hidden">
                   <video
                     autoPlay
                     loop
@@ -37,15 +37,9 @@ const About = () => {
                     playsInline
                     className="w-full h-full object-cover"
                   >
-                    <source src="https://res.cloudinary.com/doqsolr8d/video/upload/v1760382430/4015-176369904_small_f4s6mw.mp4" type="video/mp4" />
+                    <source src="https://res.cloudinary.com/doqsolr8d/video/upload/v1760553911/4014-176369901_small_sgkvfr.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
-                </div>
-                {/* Video Overlay Text */}
-                <div className="absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 bg-black/70 backdrop-blur-sm rounded-lg p-2 sm:p-4">
-                  <p className="text-white font-semibold text-sm sm:text-lg text-center">
-                    Over 20 Years of Surgical Excellence
-                  </p>
                 </div>
               </div>
             </div>
@@ -54,16 +48,19 @@ const About = () => {
             <div className="space-y-6 animate-slide-up">
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-800 leading-relaxed">
-                  Professor M.M.R Bouckaert is a highly respected Specialist Maxillofacial and Oral Surgeon 
-                  with extensive training and qualifications from prestigious institutions. With a B.ChD, 
-                  M.Dent (MFOS), FCMFOS(SA), and FFD.RCS (Ireland), Professor Bouckaert brings unparalleled 
-                  expertise to complex facial and jaw surgical procedures.
+                  Mike Bouckaert received his BChD from the University of Stellenbosch in 1976 and a MDent (MFOS) from Medunsa. 
+                  After working as a dental practitioner in Bloemfontein for 10 years, he went to the UK to sit for the primary 
+                  examinations at the Royal College of Surgeons and successfully completed an FDSI at Dublin, Edinburgh and London.
                 </p>
                 
                 <p className="text-gray-800 leading-relaxed">
-                  Fluent in both English and Afrikaans, Professor Bouckaert is committed to providing 
-                  compassionate, patient-centered care. Each treatment plan is meticulously tailored to 
-                  meet individual needs, ensuring optimal outcomes and patient satisfaction.
+                  In 1990 he was appointed Principal Dentist in the Department of Maxillo-facial and Oral Surgery at Medunsa. 
+                  In 1995 he was appointed Senior Specialist at the same institution. In 1997 he spent a sabbatical at the 
+                  Maxillo-facial Oncology Clinic at the Bundeswehrkrankenhaus, University of Ulm, Germany.
+                </p>
+                
+                <p className="text-gray-800 leading-relaxed font-semibold">
+                  His special interests are Implantology, Maxillo-facial Oncology, Traumatology and Orthognatic Surgery.
                 </p>
               </div>
 

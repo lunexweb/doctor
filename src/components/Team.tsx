@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const Team = () => {
   const teamMembers = [
     {
-      name: "Professor M.M.R Bouckaert",
+      name: "Professor M Bouckaert",
       role: "Specialist Maxillofacial & Oral Surgeon",
       image: "https://res.cloudinary.com/doqsolr8d/image/upload/v1760349271/pexels-klaus-nielsen-6303569_raqo47.jpg",
       qualifications: ["B.ChD", "M.Dent (MFOS)", "FCMFOS(SA)", "FFD.RCS (Ireland)"],
@@ -42,11 +42,11 @@ const Team = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <Users className="w-16 h-16 mx-auto mb-6 text-secondary" />
+            <Users className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mx-auto mb-6 text-secondary" />
             <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-4">
               Our Medical Team
             </h2>
-            <div className="w-24 h-1 bg-gradient-accent mx-auto mb-6" />
+            <div className="w-16 h-1 sm:w-20 sm:h-1 lg:w-24 lg:h-1 bg-gradient-accent mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Meet the experienced professionals dedicated to your care and surgical excellence
             </p>
@@ -86,7 +86,7 @@ const Team = () => {
                   
                   <div>
                     <h4 className="font-semibold text-primary mb-2 text-sm flex items-center gap-2">
-                      <Award className="w-4 h-4" />
+                      <Award className="w-3 h-3 sm:w-4 sm:h-4" />
                       Qualifications
                     </h4>
                     <div className="flex flex-wrap gap-1">
@@ -109,8 +109,8 @@ const Team = () => {
           <div className="mt-16 grid md:grid-cols-3 gap-6">
             <Card className="border-2 hover:border-secondary/50 transition-all duration-300 text-center">
               <CardContent className="p-6">
-                <div className="w-16 h-16 mx-auto mb-4 p-4 rounded-full bg-primary/5">
-                  <Heart className="w-8 h-8 text-secondary" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mx-auto mb-4 p-3 sm:p-4 rounded-full bg-primary/5">
+                  <Heart className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-2">Compassionate Care</h3>
                 <p className="text-muted-foreground text-sm">
@@ -121,8 +121,8 @@ const Team = () => {
 
             <Card className="border-2 hover:border-secondary/50 transition-all duration-300 text-center">
               <CardContent className="p-6">
-                <div className="w-16 h-16 mx-auto mb-4 p-4 rounded-full bg-primary/5">
-                  <Award className="w-8 h-8 text-secondary" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mx-auto mb-4 p-3 sm:p-4 rounded-full bg-primary/5">
+                  <Award className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-2">Professional Excellence</h3>
                 <p className="text-muted-foreground text-sm">
@@ -133,8 +133,8 @@ const Team = () => {
 
             <Card className="border-2 hover:border-secondary/50 transition-all duration-300 text-center">
               <CardContent className="p-6">
-                <div className="w-16 h-16 mx-auto mb-4 p-4 rounded-full bg-primary/5">
-                  <Stethoscope className="w-8 h-8 text-secondary" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mx-auto mb-4 p-3 sm:p-4 rounded-full bg-primary/5">
+                  <Stethoscope className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-2">Advanced Expertise</h3>
                 <p className="text-muted-foreground text-sm">
@@ -150,3 +150,4 @@ const Team = () => {
 };
 
 export default Team;
+

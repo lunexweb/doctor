@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import ContactIcons from "@/components/ContactIcons";
 import { Users, Award, Heart, Stethoscope } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,11 +13,11 @@ const Team = () => {
 
   const teamMembers = [
     {
-      name: "Professor M.M.R Bouckaert",
-      role: "Specialist Maxillofacial & Oral Surgeon",
+      name: "Dr S Simon",
+      role: "Medical Assistant",
       image: "https://res.cloudinary.com/doqsolr8d/image/upload/v1760349271/pexels-klaus-nielsen-6303569_raqo47.jpg",
-      qualifications: ["B.ChD", "M.Dent (MFOS)", "FCMFOS(SA)", "FFD.RCS (Ireland)"],
-      description: "Leading specialist with over 20 years of experience in complex maxillofacial and oral surgical procedures.",
+      qualifications: ["Medical Assistant Certification", "CPR Certified", "Patient Care Specialist"],
+      description: "Experienced medical assistant providing comprehensive support and patient care assistance.",
     },
     {
       name: "Dr. Sarah Mitchell",
@@ -39,14 +38,13 @@ const Team = () => {
   return (
     <div className="min-h-screen bg-background no-bounce">
       <Header />
-      <WhatsAppButton />
 
       {/* Hero Section */}
       <section className="relative py-20 text-primary-foreground overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760349271/pexels-klaus-nielsen-6303569_raqo47.jpg"
+            src="https://res.cloudinary.com/doqsolr8d/image/upload/v1760594213/pexels-jonathanborba-13697924_ptyb2p.jpg"
             alt="Medical Team"
             className="w-full h-full object-cover opacity-60"
           />
@@ -193,3 +191,4 @@ const Team = () => {
 };
 
 export default Team;
+
